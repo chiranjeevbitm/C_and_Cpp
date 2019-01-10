@@ -7,7 +7,7 @@ int main()
 {
 	string s1 = "Hello";
 	string s2 = "World";
-
+  
 	cout << s1.size() << endl;
 	cout << s2.length() << endl;
 
