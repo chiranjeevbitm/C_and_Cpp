@@ -1,9 +1,10 @@
-#include <iostream>
+    #include <iostream>
 
 using namespace std;
 
 void print(int a[], int sz) {
-	for (int i = 0; i < sz;  i++ ) cout << a[i] << " ";
+	for (int i = 0; i < sz;  i++ )
+		cout << a[i] << " ";
 	cout << endl;
 }
 
@@ -21,7 +22,8 @@ void CountingSort(int arr[], int sz) {
 	k = max - min + 1;
 	/* creates k buckets */
 	int *B = new int [k];
-	for(i = 0; i < k; i++) B[i] = 0;
+	for(i = 0; i < k; i++)
+	 	B[i] = 0;
 
 	for(i = 0; i < sz; i++)
   B[arr[i] - min]++;
