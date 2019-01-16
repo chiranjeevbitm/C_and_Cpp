@@ -34,4 +34,4 @@ int main ()
     showpq(gquiz);
 
     return 0;
-} 
+}
