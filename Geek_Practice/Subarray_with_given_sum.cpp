@@ -7,17 +7,20 @@ void subarrysum(int arr[],int n,int sum)
   summap<int, int> map;
   int curr_sum =0;
 
-  if (curr_sum==sum  || summap.find(curr_sum-sum) != summap.end())
-			{
-       if(curr_sum!=sum)
-			 for(int j=summap[curr_sum-sum]+1;j<=i;j++)
-			 cout<<arr[j]<<" ";
-			 else
-			 for(int k=0;k<=i;k++)
-			 cout<<arr[k]<<" ";
-			 cout<<endl;
-
-			}
+  for(int i=1;i<=n;i++)
+  {
+     curr_sum +=arr[i];
+     if(curr_sum==sum)
+     {
+     std::cout << 1 <<" " << i << '\n';
+     return;
+    }
+    //If curr_sum - sum already exists in map we have found a subarray with target sum
+    if(map.find(curr_sum - sum)!=sum)
+    {
+      std::cout << map[curr_sum-sum]+1 << " "<< i << '\n';
+      return;
+    }
     map[curr_sum] = i;
   }
 }
