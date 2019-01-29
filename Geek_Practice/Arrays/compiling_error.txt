@@ -1,0 +1,8 @@
+/Users/chiranjeev/Documents/C_and_Cpp/Geek_Practice/Arrays/PythogorianTriplets.cpp:33:7: error: use of undeclared identifier 'triplet'; did you mean 'triplets'?
+   if(triplet(arr,n))
+      ^~~~~~~
+      triplets
+/Users/chiranjeev/Documents/C_and_Cpp/Geek_Practice/Arrays/PythogorianTriplets.cpp:6:6: note: 'triplets' declared here
+bool triplets(int arr[],int n)
+     ^
+1 error generated.

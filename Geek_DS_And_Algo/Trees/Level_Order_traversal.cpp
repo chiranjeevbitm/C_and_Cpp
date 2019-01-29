@@ -24,9 +24,9 @@ struct node
 };
 
 /* Function protoypes */
-void printGivenLevel(struct node* root, int level);
-int height(struct node* node);
-struct node* newNode(int data);
+ void printGivenLevel(struct node* root, int level);
+ int height(struct node* node);
+// struct node* newNode(int data);
 
 
 void LevelOrder(struct node* root)
