@@ -1,22 +1,32 @@
 #include<iostream>
 #include<cmath>
+#include<algorithm>
 
 using namespace std;
 
-bool triplets(int arr[],int n)
+bool isTriplets(int arr[],int n)
 {
+  for(int i = 0;i<n;i++)
+  arr[i] = arr[i]*arr[i];
+
   sort(arr,arr+n);
 
-  for(int i=0;i<n-2;i++)
+  for(int i=n-1;i>=2;i--)
   {
-    double a = sqrt(arr[i]);
-    double b = sqrt(arr[i+1]);
-    double c = sqrt(arr[i+2]);
-    if(a + b == c)
-    return true;
+    int l = 0;
+    int r = i-1;
+    while(l<r)
+    {
+      if(arr[l]+arr[r]==arr[i])
+      return true;
+
+       (arr[l]+arr[r]<arr[i])? l++ : r--;
+     }
   }
+
   return false;
 }
+
 
 
 int main()
@@ -30,12 +40,8 @@ int main()
   int arr[n];
   for(int i=0;i<n;i++)
   std::cin >> arr[i];
-   if(triplet(arr,n))
-   std::cout << "Yes" << '\n';
-   else
-   std::cout << "No" << '\n';
-
-
+  isTriplets(arr,n) ? std::cout << "Yes" :std::cout << "No";
+  std::cout << '\n';
 }
 return 0;
 }
