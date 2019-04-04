@@ -1,0 +1,26 @@
+Node* reverseIterative(Node *head)
+{
+  struct Node *p = NULL;
+  struct Node *q = head;
+  struct Node *r = q->next;
+  while(q)
+  {
+      q->next = p;
+      p=q;
+      q = r ;
+      if(r)
+      r = r ->next;
+  }
+  return p;
+}
+
+
+Node* reverseRecursive(Node *head)
+{
+  if(head==NULL ||head->next ==NULL)
+  return head;
+  Node *newH = reverse(head->next);
+  head->next->next = head;
+  head->next = NULL;
+  return newH;
+}
