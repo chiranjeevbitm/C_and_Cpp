@@ -65,7 +65,7 @@ int main()
   //int res = LinSearch(a,n,5);
   //int res = BinSearch(a,0,n-1,5);
   //int res = InterPolationSearch(a,n,0);
-  int res = ExponentialSearch(a,n,8);
+  int res = ExponentialSearch(a,n,9);
   (res == -1)? std::cout << "Element is not present\n"
                : std::cout << "Element is present at index "<<res << '\n';;
 }
