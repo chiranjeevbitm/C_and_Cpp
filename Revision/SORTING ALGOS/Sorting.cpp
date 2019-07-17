@@ -372,14 +372,61 @@ void CountSort(int a[],int n,int exp)
     count[(a[i]/exp)%10]++;
   for(int i =1;i<10;i++)
     count[i] +=count[i-1];
-    
+
+}
+// 16
+int shellSort(int a[],int n)
+{
+  for(int gap=n/2;gap>0;gap/=2)
+  {
+    for(int i = gap;i<n;i+=1)
+    {
+      int temp =a[i];
+      int j;
+      for(j=i; j>= gap && a[j-gap]>temp;j-=gap)
+        a[j] = a[j-gap];
+
+
+      a[j] =temp;
+    }
+  }
+  return 0;
+}
+// 17 pigeonHole sort
+void PigenHoleSort(int a[],int n)
+{
+  //finding max and min
+  int min = a[0],max =a[0];
+  for(int i=0;i<n;i++)
+  {
+    if(a[i]<min)
+    min =a[i];
+    if(a[i]>max)
+    max = a[i];
+  }
+  // finding range
+  int range = max- min +1;
+  // put elements in the holes
+  vector<int>holes[range];
+  for(int i=0;i<n;i++)
+  {
+    holes[a[i]-min].push_back(a[i]);
+  }
+  //put back the elements to array
+  int index =0;
+  for(int i=0;i<range;i++)
+  {
+    vector<int>::iterator it;
+    for(it =holes[i].begin();it!=holes[i].end();++it)
+      a[index++] = *it;
+  }
 }
 int main()
 {
   int a[] = {5,40,3,2,1,9,6,8,7};
   //float ab[] = {0.35,0.12,0.43,0.15,0.04,0.50,0.132};
   //int a[] = {4, 9, 4, 4, 1, 9, 4, 4, 9, 4, 4, 1, 4};
-  int n = sizeof(ab)/sizeof(ab[0]);
+  int n = sizeof(a)/sizeof(a[0]);
   //SelectionSort(a,n);
   //IterBubbleSort(a,n);
   //RecBubbleSort(a,n);
@@ -394,6 +441,8 @@ int main()
   //RandomisedQS(a,0,n);
   //Heapsort(a,n);
   //BucketSort(ab,n);
+  //shellSort(a,n);
+  PigenHoleSort(a,n);
   //printfloatArray(ab,n);
   printArray(a,n);
 

@@ -11,7 +11,7 @@ int main()
     int primeFactor = 2;
     while(primeFactor*primeFactor <= N) {
       if(N % primeFactor == 0) {
-        N /= primeFactor;
+        N = N/ primeFactor;
       }
       else {
         primeFactor++;

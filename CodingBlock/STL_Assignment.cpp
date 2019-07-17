@@ -6,9 +6,9 @@ using namespace std;
 
 bool comp(string a,string b)
 {
-  if (a.find(b) != std::string::npos)
-    return (a.length()>b.length());
-
+  std::size_t found = a.find(b);
+  if (found != std::string::npos)
+     return (a.length()>b.length());
 
 }
 void StringSort(int t)
@@ -22,12 +22,14 @@ void StringSort(int t)
   }
   sort(s,s+t);
   sort(s,s+t,comp);
+
   for(int i =0;i<t;i++)
   {
     cout<<s[i]<<'\n';
   }
 
 }
+
 
 int main() {
   int k;
