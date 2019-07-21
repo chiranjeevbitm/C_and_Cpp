@@ -1,23 +1,23 @@
 #include<iostream>
 #include<math.h>
 using namespace std;
+int min(double x,double y)
+{
+    return (x<y)?x:y;
+}
 int main()
  {
 	int t;
 	cin>>t;
 	while(t--)
 	{
-	float h,m;
-	float h_a,m_a;
-	cin>>h>>m;
-  if(m==60)
-  	 h_a = (h)*30;
-  else
-	 h_a = (h + m/60)*30;
+	double h,m;
 
-	 m_a = m * 6 ;
-	int res = fabs(h_a-m_a);
-  cout<<floor(res)<<'\n';
+	cin>>h>>m;
+  if(m==60) m=0;
+  if(h==12) h=0;
+  double a=fabs((60*h)-(11*m))/2.0;
+  cout<<min(360-a,a)<<'\n';
 	}
 
 	return 0;

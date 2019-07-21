@@ -2,20 +2,20 @@ package june15;
 
 import java.util.ArrayList;
 
-public class RecursionDemos {
+public class Recursion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// System.out.println(printSS("abcd", ""));
 		// System.out.println(printKPC("196", ""));
-		// System.out.println(printMPWDMS(0, 0, 2, 2, ""));
+		 System.out.println(printMPWD(0, 0, 3, 3, ""));
 		// System.out.println(printBP(0, 10, ""));
 		// int[] arr = { 10, 20, 30, 40, 50, 60, 70 };
 		// System.out.println(printSSEqualToComplement(arr, 0, "", "", 0, 0,
 		// false));
 		// System.out.println(printSSWithSumEqualToTarget(arr, 0, 7, ""));
 		int n = 5;
-		System.out.println(printNQueens(new boolean[n][n], 0, ""));
+		//System.out.println(printNQueens(new boolean[n][n], 0, ""));
 //		printSSWithASb("abc", 0,  new StringBuilder());
 	}
 
@@ -33,7 +33,7 @@ public class RecursionDemos {
 
 		return cno + cyes;
 	}
-	
+
 	public static int printSSWithASb(String quest, int vidx, StringBuilder ans) {
 		if (vidx == quest.length()) {
 			System.out.println(ans);
@@ -43,7 +43,7 @@ public class RecursionDemos {
 		char ch = quest.charAt(vidx);
 
 		int cno = printSSWithASb(quest, vidx + 1, ans); // no
-		
+
 		ans.append(ch);
 		int cyes = printSSWithASb(quest, vidx + 1, ans); // yes
 		ans.deleteCharAt(ans.length() - 1);
@@ -167,9 +167,10 @@ public class RecursionDemos {
 
 		int ch = printMPWD(cr, cc + 1, er, ec, ans + "H");
 		int cv = printMPWD(cr + 1, cc, er, ec, ans + "V");
-		int cd = printMPWD(cr + 1, cc + 1, er, ec, ans + "D");
+		//int cd = printMPWD(cr + 1, cc + 1, er, ec, ans + "D");
 
-		count = ch + cv + cd;
+		//count = ch + cv + cd;
+		count = ch + cv;
 
 		return count;
 	}
@@ -224,7 +225,7 @@ public class RecursionDemos {
 		return count;
 	}
 
-	public static int printSSWithSumEqualToTarget(int[] arr, int vidx, int tar, 
+	public static int printSSWithSumEqualToTarget(int[] arr, int vidx, int tar,
 												  String ans) {
 		if (vidx == arr.length) {
 			if (tar == 0) {
