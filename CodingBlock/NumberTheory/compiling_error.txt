@@ -1,0 +1,46 @@
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:61:3: error: no matching function for call to 'seivePrime'
+  seivePrime();
+  ^~~~~~~~~~
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:36:13: note: candidate function not viable: requires 2 arguments, but 0 were provided
+vector<int> seivePrime(int *p,int n)
+            ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:67:8: error: use of undeclared identifier 'p'
+    if(p[i])
+       ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:85:9: error: use of undeclared identifier 'p'
+  while(p*p<n)
+        ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:85:11: error: use of undeclared identifier 'p'
+  while(p*p<n)
+          ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:85:13: error: use of undeclared identifier 'n'
+  while(p*p<n)
+            ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:87:10: error: use of undeclared identifier 'p'
+    if(m%p==0)
+         ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:89:25: error: use of undeclared identifier 'p'
+      factors.push_back(p);
+                        ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:90:15: error: use of undeclared identifier 'p'
+      while(m%p==0)
+              ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:92:13: error: use of undeclared identifier 'p'
+        m=m/p;
+            ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:95:5: error: use of undeclared identifier 'i'
+    i++;
+    ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:96:5: error: use of undeclared identifier 'p'
+    p=primes[i];
+    ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:96:14: error: use of undeclared identifier 'i'
+    p=primes[i];
+             ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:126:6: warning: 'auto' type specifier is a C++11 extension [-Wc++11-extensions]
+ for(auto f:factors)
+     ^
+/Users/chiranjeev/Documents/C_and_Cpp/CodingBlock/NumberTheory/checkingPrime.cpp:126:12: warning: range-based for loop is a C++11 extension [-Wc++11-extensions]
+ for(auto f:factors)
+           ^
+2 warnings and 12 errors generated.
