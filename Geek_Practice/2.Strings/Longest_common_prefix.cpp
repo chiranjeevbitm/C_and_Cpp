@@ -32,13 +32,17 @@ int main()
  {
 	int t;
 	cin>>t;
+  string ans;
 	while(t--)
 	{
 	int n;
 	cin>>n;
 	string arr[4];
 	for(int i=0;i<n;i++) cin>>arr[i];
-  string ans = lcp(arr,n);
+  ans = lcp(arr,n);
+  if(ans.length()==0)
+	cout<<"-1"<<"\n";
+  else
 	cout<<ans<<"\n";
 	}
 	return 0;

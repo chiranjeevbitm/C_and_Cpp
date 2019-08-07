@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-#include<limits>
+
+#include<limits.h>
 
 void findMax(int a[],int k,int n)
 {
