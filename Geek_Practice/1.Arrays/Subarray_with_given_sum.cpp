@@ -20,7 +20,7 @@ using namespace std;
 //     {
 //       std::cout << map[curr_sum-sum]+1 << " "<< i << '\n';
 //       return;
-//     }
+//    q}
 //     map[curr_sum] = i;
 //   }
 // }
