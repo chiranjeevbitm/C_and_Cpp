@@ -58,7 +58,7 @@ void SubArrSum(int a[],int n,int s)
 int main()
 {
   int t,n,sum;
-  //sum_map <int, int> map;
+
 
   std::cin >>t ;
   while(t--)

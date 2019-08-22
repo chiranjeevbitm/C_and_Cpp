@@ -28,7 +28,7 @@ ll findWays(ll m, ll n, ll x)
 
 // DP
 
-long findWays(int f, int d, int s)
+long findWaysDP(int f, int d, int s)
 {
   // Create a table to store results of subproblems. One extra
   // row and column are used for simpilicity (Number of dice
@@ -69,7 +69,7 @@ int main()
 	ll m,n,x;
 	cin>>m>>n>>x;
 	memset(dp,-1,sizeof dp);
-	cout<<findWays(m,n,x)<<'\n';
+	cout<<findWaysDP(m,n,x)<<'\n';
 	}
 	return 0;
 }

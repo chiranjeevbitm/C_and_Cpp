@@ -4,6 +4,19 @@ using namespace std;
 #define ll long long
 ll memo[301][301];
 
+
+ll coin_change(ll coins[],ll amount,ll n)
+{
+    if(amount==0)   return 1;
+    if(amount<0||n<=0) return 0;
+
+
+    ll ans = coin_change(coins,amount-coins[n-1],n) + coin_change(coins,amount,n-1);
+
+
+    return ans;
+}
+
 ll coin_change_memo(ll coins[],ll amount,ll n)
 {
     if(amount==0)   return 1;

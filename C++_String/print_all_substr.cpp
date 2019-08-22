@@ -54,6 +54,7 @@ int sumOfSubstrings(string num)
 int main()
 {
     string num = "1234";
-    cout << sumOfSubstrings(num) << endl;
+    printSubStr(num) ;
+    //cout << sumOfSubstrings(num) << endl;
     return 0;
 }
